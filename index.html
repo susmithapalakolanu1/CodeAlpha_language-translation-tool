@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Language Translation Tool</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Language Translation Tool</h1>
+        </header>
+        
+        <main class="translator">
+            <div class="input-section">
+                <div class="language-selector">
+                    <label for="source-lang">From:</label>
+                    <select id="source-lang">
+                        <option value="auto">Auto Detect</option>
+                        <option value="en">English</option>
+                        <option value="es">Spanish</option>
+                        <option value="fr">French</option>
+                        <option value="de">German</option>
+                        <option value="it">Italian</option>
+                        <option value="pt">Portuguese</option>
+                        <option value="ru">Russian</option>
+                        <option value="ja">Japanese</option>
+                        <option value="ko">Korean</option>
+                        <option value="zh">Chinese</option>
+                        <option value="ar">Arabic</option>
+                        <option value="hi">Hindi</option>
+                    </select>
+                </div>
+                <textarea 
+                    id="source-text" 
+                    placeholder="Enter text to translate..."
+                    rows="6"
+                ></textarea>
+            </div>
+            
+            <div class="swap-section">
+                <button id="swap-btn" title="Swap languages">⇄</button>
+            </div>
+            
+            <div class="output-section">
+                <div class="language-selector">
+                    <label for="target-lang">To:</label>
+                    <select id="target-lang">
+                        <option value="es">Spanish</option>
+                        <option value="en">English</option>
+                        <option value="fr">French</option>
+                        <option value="de">German</option>
+                        <option value="it">Italian</option>
+                        <option value="pt">Portuguese</option>
+                        <option value="ru">Russian</option>
+                        <option value="ja">Japanese</option>
+                        <option value="ko">Korean</option>
+                        <option value="zh">Chinese</option>
+                        <option value="ar">Arabic</option>
+                        <option value="hi">Hindi</option>
+                    </select>
+                </div>
+                <textarea 
+                    id="target-text" 
+                    placeholder="Translation will appear here..."
+                    rows="6"
+                    readonly
+                ></textarea>
+            </div>
+        </main>
+        
+        <div class="controls">
+            <button id="translate-btn" class="primary-btn">Translate</button>
+        </div>
+        <br>
+        <div class="controls">
+          <button id="clear-btn" class="secondary-btn">Clear</button>
+        </div>
+        <br>
+        <div class="controls">
+          <button id="copy-btn" class="secondary-btn">Copy Translation</button>
+        </div>
+        
+        <div id="status" class="status"></div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+                          </html>
